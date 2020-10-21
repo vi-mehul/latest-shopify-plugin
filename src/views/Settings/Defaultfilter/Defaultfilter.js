@@ -218,7 +218,7 @@ class Defaultfilter extends Component {
       });
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/enabled-filters.php",
+        "https://vishwainfoways.com/shopify-api/enabled-filters.php",
         {
           data: {
             shop_id: 2,
@@ -244,7 +244,7 @@ class Defaultfilter extends Component {
       });
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/collection-vs-products-chandlelist.php",
+        "https://vishwainfoways.com/shopify-api/collection-vs-products-chandlelist.php",
         {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Credentials": true,

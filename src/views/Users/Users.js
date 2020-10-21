@@ -27,9 +27,9 @@ function UserRow(props) {
   )
 }
 
-class Users extends Component {
+const Users = (props)=> {
 
-  render() {
+  
 
     const userList = usersData.filter((user) => user.id < 10)
 
@@ -64,7 +64,7 @@ class Users extends Component {
         </Row>
       </div>
     )
-  }
+  
 }
 
 export default Users;

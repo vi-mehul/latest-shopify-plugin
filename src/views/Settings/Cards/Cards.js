@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Badge, Card, CardBody, CardFooter, CardHeader, Col, Row, Collapse, Fade } from 'reactstrap';
 import { AppSwitch } from '@coreui/react'
 
-class Cards extends Component {
-  constructor(props) {
-    super(props);
+const Cards = (props) => {
+  // constructor(props) {
+  //   super(props);
 
-    this.toggle = this.toggle.bind(this);
-    this.toggleFade = this.toggleFade.bind(this);
-    this.state = {
+    // this.toggle = this.toggle.bind(this);
+    // this.toggleFade = this.toggleFade.bind(this);
+    const [state, setState] = useState({
       collapse: true,
       fadeIn: true,
       timeout: 300
-    };
+    })  ;
+  // }
+
+  const toggle = () => {
+    this.setState({ collapse: !state.collapse });
   }
 
-  toggle() {
-    this.setState({ collapse: !this.state.collapse });
-  }
-
-  toggleFade() {
+  const toggleFade = () => {
     this.setState((prevState) => { return { fadeIn: !prevState }});
   }
 
-  render() {
+  
     return (
       <div className="animated fadeIn">
         <Row>
@@ -383,7 +383,7 @@ class Cards extends Component {
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4">
-            <Fade timeout={this.state.timeout} in={this.state.fadeIn}>
+            <Fade timeout={state.timeout} in={state.fadeIn}>
               <Card>
                 <CardHeader>
                   Card actions
@@ -396,7 +396,7 @@ class Cards extends Component {
                     <a className="card-header-action btn btn-close" onClick={this.toggleFade}><i className="icon-close"></i></a>
                   </div>
                 </CardHeader>
-                <Collapse isOpen={this.state.collapse} id="collapseExample">
+                <Collapse isOpen={state.collapse} id="collapseExample">
                   <CardBody>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
@@ -410,7 +410,7 @@ class Cards extends Component {
         </Row>
       </div>
     );
-  }
+  
 }
 
 export default Cards;

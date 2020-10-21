@@ -19,9 +19,8 @@ import {
 } from "reactstrap";
 import { AppSwitch } from '@coreui/react';
 
-class Customfilter extends Component {
-  constructor(props) {
-    super(props);
+const Customfilter = (props) => {
+  
     this.onEditchange = this.onEditchange.bind(this);
     this.onUpdateSave = this.onUpdateSave.bind(this);
     this.onSaveAddValue = this.onSaveAddValue.bind(this);
@@ -46,8 +45,8 @@ class Customfilter extends Component {
       this
     );
     this.onDeleteItem = this.onDeleteItem.bind(this);
-  }
-  state = {
+  
+  this.state = {
     tab: "CustomFilter",
     CustomFilterData: [],
     isCustomlabelvalue: "",
@@ -64,36 +63,36 @@ class Customfilter extends Component {
     danger: false,
     savestatus: '',
   };
-  OnShowHiedClick() {
+  const  OnShowHiedClick = () => {
     this.setState({ show: !this.state.show });
   }
-  onCustomLabelValue = e => {
+ const onCustomLabelValue = e => {
     this.setState({ isCustomlabelvalue: e.target.value });
   };
-  onCustomfilterlabelLabelValue = e => {
+ const onCustomfilterlabelLabelValue = e => {
     this.setState({ isCustomfilterlabelvalue: e.target.value });
   };
-  OnAddCustomVariantsLabelsChange = e => {
+  const OnAddCustomVariantsLabelsChange = e => {
     this.setState({ isAddCustomVariantsLabelsvalue: e.target.value });
     this.setState({ savestatus: 'Save'});
   };
-  OnAddCustomLabelNameChange = e => {
+  const OnAddCustomLabelNameChange = e => {
     this.setState({ isAddCustomLabelsNamevalue: e.target.value });
     this.setState({ savestatus: 'Save'});
   };
-  OnAddCustomFilterLabelsChange = e => {
+  const OnAddCustomFilterLabelsChange = e => {
     this.setState({ isAddCustomFilterLabelsvalue: e.target.value });
     this.setState({ savestatus: 'Save'});
   };
-  OnAddCustomFilterLabelsNameChange = e => {
+  const OnAddCustomFilterLabelsNameChange = e => {
     this.setState({ isAddCustomFilterLabelsNamevalue: e.target.value });
     this.setState({ savestatus: 'Save'});
   };
-  OnCustomEnabelCheckedChange = e => {
+  const OnCustomEnabelCheckedChange = e => {
     this.setState({ isCustomEnabelChecked: e.target.checked });
     this.setState({ savestatus: 'Save'});
   };
-  OnCustomSwitchvalueChange = (index, item) => {
+  const OnCustomSwitchvalueChange = (index, item) => {
     let CustomFilterData = [...this.state.CustomFilterData];
     console.log("gergeasg", this.state.CustomFilterData)
     let newItem = {};
@@ -108,11 +107,11 @@ class Customfilter extends Component {
     );
     this.setState({ CustomFilterData: CustomFilterData });
   };
-  updateCustomFilterStatus = async type => {
+const updateCustomFilterStatus = async type => {
     console.log(this.state.allCustomFilterEnabled);
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/enabled-filters.php",
+        "https://vishwainfoways.com/shopify-api/enabled-filters.php",
         {
           data: {
             shop_id: 2,
@@ -134,16 +133,16 @@ class Customfilter extends Component {
       )
       .then(res => console.log(res.data));
   };
-  fnUpdateCustomFilterStatus = type => {
+  const fnUpdateCustomFilterStatus = type => {
     this.updateCustomFilterStatus(type);
   };
-  OnAllCustomSwitchValueChange = e => {
+  const OnAllCustomSwitchValueChange = e => {
     this.setState({ allCustomFilterEnabled: e.target.checked }, function () {
       this.fnUpdateCustomFilterStatus("custom");
     });
   };
 
-  returnClassEnabled = () => {
+  const returnClassEnabled = () => {
     if (this.state.allCustomFilterEnabled) {
       return "table-responsive";
     }
@@ -151,9 +150,9 @@ class Customfilter extends Component {
     return "table-responsive disabledDivContent";
   };
 
-  componentDidMount = async () => {
+  const componentDidMount = async () => {
     await axios
-      .post("https://vishwainfoways.com/searchtuls.com/shopify/api/custom-filter-api.php", {
+      .post("https://vishwainfoways.com/shopify-api/custom-filter-api.php", {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Headers":
@@ -176,7 +175,7 @@ class Customfilter extends Component {
       });
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/enabled-filters.php",
+        "https://vishwainfoways.com/shopify-api/enabled-filters.php",
         {
           data: {
             shop_id: 2,
@@ -203,12 +202,12 @@ class Customfilter extends Component {
         });
       });
   };
-  onEditchange = index => {
+  const onEditchange = index => {
     const isInEditMode = [...this.state.isInEditMode];
     isInEditMode[index] = !isInEditMode[index];
     this.setState({ isInEditMode: isInEditMode });
   };
-  onUpdateSave = async (index, item) => {
+  const onUpdateSave = async (index, item) => {
     let CustomFilterData = [...this.state.CustomFilterData];
     let newItem = {};
     newItem["id"] = item.id;
@@ -226,7 +225,7 @@ class Customfilter extends Component {
     const item_id = item.id;
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/custom-filter-api.php",
+        "https://vishwainfoways.com/shopify-api/custom-filter-api.php",
         {
           data: {
             shop_id: 2,
@@ -250,7 +249,7 @@ class Customfilter extends Component {
       .then(res => console.log(res.data));
     this.onEditchange(index);
   };
-  onSaveAddValue = async index => { 
+  const onSaveAddValue = async index => { 
     if (
       this.state.isAddCustomVariantsLabelsvalue != '' &&
       this.state.isAddCustomLabelsNamevalue != '' &&
@@ -267,7 +266,7 @@ class Customfilter extends Component {
     this.setState({ CustomFilterData: CustomFilterData });    
       await axios
         .post(
-          "https://searchtuls.com/shopify/api/custom-filter-api.php",
+          "https://vishwainfoways.com/shopify-api/custom-filter-api.php",
           {
             data: {
               shop_id: 2,
@@ -297,7 +296,7 @@ class Customfilter extends Component {
       this.setState({danger: true});
     }
   };
-  onDeleteItem = async (index, item) => {
+  const onDeleteItem = async (index, item) => {
     let CustomFilterData = [...this.state.CustomFilterData];
     let newItem = {};
     newItem["id"] = item.id;
@@ -311,7 +310,7 @@ class Customfilter extends Component {
     });
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/custom-deleteapi.php",
+        "https://vishwainfoways.com/shopify-api/custom-deleteapi.php",
         {
           data: {
             shop_id: 2,
@@ -331,13 +330,13 @@ class Customfilter extends Component {
       )
       .then(res => console.log(res.data));
   };
-  toggleDanger = () => {
+  const toggleDanger = () => {
     this.setState({
       danger: false,
     });
   }
 
-  render() {
+  
     return (
       <div className="product_labels_page animated fadeIn">
         <Row>
@@ -603,7 +602,7 @@ class Customfilter extends Component {
         </Row >
       </div >
     );
-  }
+  
 }
 
 export default Customfilter;

@@ -27,7 +27,7 @@ class SortingOptions extends Component {
   componentDidMount = async () => {
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/paging-options.php",
+        "https://vishwainfoways.com/shopify-api/paging-options.php",
         {
           data: {
             shop_id: 2,
@@ -59,7 +59,7 @@ class SortingOptions extends Component {
     this.setState({ saving: 'Saving' });
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/paging-options.php",
+        "https://vishwainfoways.com/shopify-api/paging-options.php",
         {
           data: {
             action: "POST",

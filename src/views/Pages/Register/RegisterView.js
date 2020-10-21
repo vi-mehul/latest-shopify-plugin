@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 
-  const Register = () => {
+  const RegisterView = () => {
 
     const [user, setUser] = useState({ 
       username:"",
@@ -114,4 +114,4 @@ import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputG
   
 }
 
-export default Register;
+export default RegisterView;

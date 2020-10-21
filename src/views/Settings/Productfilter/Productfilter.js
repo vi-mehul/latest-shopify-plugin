@@ -90,7 +90,7 @@ class Productfilter extends Component {
   };
   componentDidMount = async () => {
     await axios
-      .post("https://searchtuls.com/shopify/api/product-filter-api.php", {
+      .post("https://vishwainfoways.com/shopify-api/product-filter-api.php", {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Headers":
@@ -110,7 +110,7 @@ class Productfilter extends Component {
         this.setState({ isInEditMode: enabled });
       });
     await axios
-      .post("https://searchtuls.com/shopify/api/variants-list-api.php", {
+      .post("https://vishwainfoways.com/shopify-api/variants-list-api.php", {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Headers":
@@ -126,7 +126,7 @@ class Productfilter extends Component {
       });
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/enabled-filters.php",
+        "https://vishwainfoways.com/shopify-api/enabled-filters.php",
         {
           data: {
             shop_id: 2,
@@ -173,7 +173,7 @@ class Productfilter extends Component {
     const item_id = item.id;
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/product-filter-api.php",
+        "https://vishwainfoways.com/shopify-api/product-filter-api.php",
         {
           data: {
             shop_id: 2,
@@ -208,7 +208,7 @@ class Productfilter extends Component {
       ProductFilterData.push(newItemAdd);
       await axios
         .post(
-          "https://searchtuls.com/shopify/api/product-filter-api.php",
+          "https://vishwainfoways.com/shopify-api/product-filter-api.php",
           {
             data: {
               shop_id: 2,
@@ -250,7 +250,7 @@ class Productfilter extends Component {
     });
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/product-deleteapi.php",
+        "https://vishwainfoways.com/shopify-api/product-deleteapi.php",
         {
           data: {
             shop_id: 2,
@@ -273,7 +273,7 @@ class Productfilter extends Component {
   updateVariantFilterStatus = async type => {
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/enabled-filters.php",
+        "https://vishwainfoways.com/shopify-api/enabled-filters.php",
         {
           data: {
             shop_id: 2,

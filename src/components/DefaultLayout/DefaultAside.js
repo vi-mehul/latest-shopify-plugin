@@ -20,7 +20,7 @@ const DefaultAside = (props) => {
 
    const toggle = (tab) => {
     if (activeTab !== tab) {
-      this.setState({
+      setstate({
         activeTab: tab,
       });
     }
@@ -44,7 +44,7 @@ const DefaultAside = (props) => {
           <NavItem>
             <NavLink className={classNames({ active: activeTab === '2' })}
                      onClick={() => {
-                       this.toggle('2');
+                       toggle('2');
                      }}>
               <i className="icon-speech"></i>
             </NavLink>
@@ -52,7 +52,7 @@ const DefaultAside = (props) => {
           <NavItem>
             <NavLink className={classNames({ active: activeTab === '3' })}
                      onClick={() => {
-                       this.toggle('3');
+                       toggle('3');
                      }}>
               <i className="icon-settings"></i>
             </NavLink>

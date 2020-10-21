@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from 'react';
+import React, {  Suspense } from 'react';
 import {  BrowserRouter as Router ,Redirect , Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import DefaultHeader from './DefaultHeader'

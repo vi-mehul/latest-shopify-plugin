@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
-class Page404 extends Component {
-  render() {
+const Page500View = () => {
+  
     return (
       <div className="app flex-row align-items-center">
         <Container>
           <Row className="justify-content-center">
             <Col md="6">
-              <div className="clearfix">
-                <h1 className="float-left display-3 mr-4">404</h1>
-                <h4 className="pt-3">Oops! You're lost.</h4>
-                <p className="text-muted float-left">The page you are looking for was not found.</p>
-              </div>
+              <span className="clearfix">
+                <h1 className="float-left display-3 mr-4">500</h1>
+                <h4 className="pt-3">Houston, we have a problem!</h4>
+                <p className="text-muted float-left">The page you are looking for is temporarily unavailable.</p>
+              </span>
               <InputGroup className="input-prepend">
                 <InputGroupAddon addonType="prepend">
                   <InputGroupText>
@@ -29,7 +29,7 @@ class Page404 extends Component {
         </Container>
       </div>
     );
-  }
+  
 }
 
-export default Page404;
+export default Page500View;

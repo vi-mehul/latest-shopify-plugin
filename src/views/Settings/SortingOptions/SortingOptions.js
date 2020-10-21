@@ -42,7 +42,7 @@ class SortingOptions extends Component {
   componentDidMount = async () => {
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/sorting-options.php", {
+        "https://vishwainfoways.com/shopify-api/sorting-options.php", {
           data: {
             shop_id: 2,
             action: 'GET'
@@ -104,7 +104,7 @@ class SortingOptions extends Component {
   fnUpdateSortingOptions = async () => {
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/sorting-options.php",
+        "https://vishwainfoways.com/shopify-api/sorting-options.php",
         {
           data: {
             action: 'POST',
@@ -129,7 +129,7 @@ class SortingOptions extends Component {
   updateSortingOptionsStatus = async (type) => {
     await axios
       .post(
-        "https://searchtuls.com/shopify/api/enabled-filters.php",
+        "https://vishwainfoways.com/shopify-api/enabled-filters.php",
         {
           data: {
             shop_id: 2,

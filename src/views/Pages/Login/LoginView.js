@@ -16,7 +16,7 @@ import {
 } from "reactstrap";
 
 
-  const Login = () => {
+  const LoginView = () => {
     // let history = useHistory();
   const [logindata, setlogindata] = useState({
     isLoginUserName : "",
@@ -105,4 +105,4 @@ import {
   
 }
 
-export default Login;
+export default LoginView;
