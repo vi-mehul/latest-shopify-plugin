@@ -1,0 +1,84 @@
+
+.border_bottom {
+  padding: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+button.filter_save_btn {
+  float: right;
+  background-color: #63c2de;
+  color: #fff;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.tab_content_title i {
+  margin-top: 0 !important;
+}
+.switchery > small {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  height: 30px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+.switchery {
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  vertical-align: middle;
+  width: 50px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: content-box;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+.filter_tabel {
+  background-color: #fff;
+}
+.row.row_notes {
+  font-size: 11px;
+  padding-left: 20px;
+}
+
+.disabledDivContent {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.table-responsive {
+  overflow-x: visible !important;
+}
+.In_Ex_detail > .switch {
+  position: relative;
+  float: right;
+  left: 80px;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.login_btn {
+  color: #fff;
+  background-color: #4dbd74 !important;
+  border-color: #4dbd74 !important;
+}
+.login_btn:focus{
+  box-shadow: 0 0 0 0.2rem rgba(104, 199, 137, 0.5) !important;
+}
+.login_btn:hover{
+  color: #fff;
+  background-color: #3ea662 !important;
+  border-color: #3a9d5d !important;
+}
+.fp_text {
+  color: #4dbd74 !important;
+}

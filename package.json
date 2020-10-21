@@ -1,0 +1,61 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@coreui/coreui": "^2.1.9",
+    "@coreui/coreui-plugin-chartjs-custom-tooltips": "^1.2.0",
+    "@coreui/icons": "0.3.0",
+    "@coreui/react": "~2.1.5",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.8.0",
+    "classnames": "^2.2.6",
+    "core-js": "^2.6.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "filter": "^0.1.1",
+    "flag-icon-css": "^3.3.0",
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-app-polyfill": "^0.2.2",
+    "react-chartjs-2": "^2.7.4",
+    "react-color": "^2.17.0",
+    "react-dom": "^16.14.0",
+    "react-portal-tooltip": "^2.4.7",
+    "react-router-config": "^4.4.0-beta.8",
+    "react-router-dom": "^4.3.1 ",
+    "react-select": "^2.4.3",
+    "react-switchery-component": "0.0.7",
+    "react-test-renderer": "^16.14.0",
+    "react-toggle-display": "^2.2.0",
+    "reactstrap": "^7.1.0",
+    "simple-line-icons": "^2.4.1"
+  },
+  "devDependencies": {
+    "react-scripts": "^3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
