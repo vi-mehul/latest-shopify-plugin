@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 
-class Breadcrumbs extends Component {
-  render() {
+const Breadcrumbs = () => {
+ 
     return (
       <div className="animated fadeIn">
         <Row>
@@ -44,7 +44,7 @@ class Breadcrumbs extends Component {
         </Row>
       </div>
     );
-  }
+  
 }
 
 export default Breadcrumbs;

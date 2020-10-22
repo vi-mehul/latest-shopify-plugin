@@ -13,18 +13,18 @@ import {
 } from "reactstrap";
 import { AppSwitch } from '@coreui/react';
 
-class SortingOptions extends Component {
-  constructor(props) {
-    super(props);
-  }
+const SortingOptions = () => {
+  // constructor(props) {
+  //   super(props);
+  // }
 
-  state = {
-    infiniteScrollEnabled: true,
-    productsPerPage: 10,
-    saving: '',
-  };
+  // state = {
+  //   infiniteScrollEnabled: true,
+  //   productsPerPage: 10,
+  //   saving: '',
+  // };
 
-  componentDidMount = async () => {
+  const componentDidMount = async () => {
     await axios
       .post(
         "https://vishwainfoways.com/shopify-api/paging-options.php",
@@ -55,7 +55,7 @@ class SortingOptions extends Component {
       });
   };
 
-  fnUpdatePagingOptions = async () => {
+const  fnUpdatePagingOptions = async () => {
     this.setState({ saving: 'Saving' });
     await axios
       .post(
@@ -85,18 +85,18 @@ class SortingOptions extends Component {
       });
   };
 
-  onProductPerPageChange = e => {
+  const onProductPerPageChange = e => {
     this.setState({ productsPerPage: e.target.value });
     this.setState({ saving: 'Save' });
   };
-  onInfiniteScrollEnable = e => {
+  const onInfiniteScrollEnable = e => {
     this.setState({ infiniteScrollEnabled: e.target.checked });
     this.setState({ saving: 'Save' });
   };
-  saveChanges = () => {
+  const saveChanges = () => {
     this.fnUpdatePagingOptions();
   }
-  render() {
+  
     let paging = [10, 20, 25, 50, 100, 200];
     return (
       <div className="product_labels_page animated fadeIn">
@@ -156,7 +156,7 @@ class SortingOptions extends Component {
         </Card>
       </div>
     );
-  }
+  
 }
 
 export default SortingOptions;

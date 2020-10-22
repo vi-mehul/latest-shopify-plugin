@@ -63,7 +63,7 @@ console.log("fwegagagr", navigation)
               <Suspense fallback={loading()}>
                 <Switch>
                   {routes.map((route, idx) => {
-                    {console.log("fggergerasr", route)}
+                    {/* {console.log("fggergerasr", route)} */}
                     return route.component ? (
 
                       <Route

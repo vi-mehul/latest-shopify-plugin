@@ -14,11 +14,11 @@ const Register = React.lazy(() => import('./components/Register/Register'));
 const Page404 = React.lazy(() => import('./components/Page404/Page404'));
 const Page500 = React.lazy(() => import('./components/Page500/Page500'));
 
-// const Defaultfilter = React.lazy(() => import('./views/Settings/Defaultfilter/Defaultfilter'));
-// const Customfilter = React.lazy(() => import('./views/Settings/Customfilter/Customfilter'));
-// const Productfilter = React.lazy(() => import('./views/Settings/Productfilter/Productfilter'));
-// const SortingOptions = React.lazy(() => import('./views/Settings/SortingOptions/SortingOptions'));
-// const PagingOptions = React.lazy(() => import('./views/Settings/PagingOptions/'));
+const Defaultfilter = React.lazy(() => import('./views/Settings/Defaultfilter/Defaultfilter'));
+const Customfilter = React.lazy(() => import('./views/Settings/Customfilter/Customfilter'));
+const Productfilter = React.lazy(() => import('./views/Settings/Productfilter/Productfilter'));
+const SortingOptions = React.lazy(() => import('./views/Settings/SortingOptions/SortingOptions'));
+const PagingOptions = React.lazy(() => import('./views/Settings/PagingOptions/'));
 
 
 const App = (props) => {
@@ -34,11 +34,11 @@ const App = (props) => {
               <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
               <Route path="/" name="Home" render={props => <DefaultLayout {...props}/>} />
 
-              {/* <Route exact path="/settings/Defaultfilter" name="Defaultfilter" render={props => <Defaultfilter {...props}/>} />
+              <Route exact path="/settings/Defaultfilter" name="Defaultfilter" render={props => <Defaultfilter {...props}/>} />
               <Route exact path="/settings/Customfilter" name="Customfilter" render={props => <Customfilter {...props}/>} />
               <Route exact path="/settings/Productfilter" name="Productfilter" render={props => <Productfilter {...props}/>} />
               <Route exact path="/settings/SortingOptions" name="SortingOptions" render={props => <SortingOptions {...props}/>} />
-              <Route exact path="/settings/PagingOptions" name="PagingOptions" render={props => <PagingOptions {...props}/>} /> */}
+              <Route exact path="/settings/PagingOptions" name="PagingOptions" render={props => <PagingOptions {...props}/>} />
             </Switch>
           </React.Suspense>
       </HashRouter>

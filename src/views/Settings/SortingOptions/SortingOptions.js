@@ -61,7 +61,7 @@ class SortingOptions extends Component {
       )
       .then(resJSON => {
 
-        console.log(resJSON);
+        console.log("fefwef",resJSON);
         let SortingOptions1 = resJSON.data;
         let SortingOptions2 = [...this.state.SortingOptions];
 

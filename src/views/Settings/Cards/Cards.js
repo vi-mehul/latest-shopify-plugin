@@ -6,8 +6,8 @@ const Cards = (props) => {
   // constructor(props) {
   //   super(props);
 
-    // this.toggle = this.toggle.bind(this);
-    // this.toggleFade = this.toggleFade.bind(this);
+    this.toggle = this.toggle.bind(this);
+    this.toggleFade = this.toggleFade.bind(this);
     const [state, setState] = useState({
       collapse: true,
       fadeIn: true,
@@ -16,11 +16,11 @@ const Cards = (props) => {
   // }
 
   const toggle = () => {
-    this.setState({ collapse: !state.collapse });
+    setState({ collapse: !state.collapse });
   }
 
   const toggleFade = () => {
-    this.setState((prevState) => { return { fadeIn: !prevState }});
+    setState((prevState) => { return { fadeIn: !prevState }});
   }
 
   
@@ -391,9 +391,9 @@ const Cards = (props) => {
                     {/*eslint-disable-next-line*/}
                     <a href="#" className="card-header-action btn btn-setting"><i className="icon-settings"></i></a>
                     {/*eslint-disable-next-line*/}
-                    <a className="card-header-action btn btn-minimize" data-target="#collapseExample" onClick={this.toggle}><i className="icon-arrow-up"></i></a>
+                    <a className="card-header-action btn btn-minimize" data-target="#collapseExample" onClick={toggle}><i className="icon-arrow-up"></i></a>
                     {/*eslint-disable-next-line*/}
-                    <a className="card-header-action btn btn-close" onClick={this.toggleFade}><i className="icon-close"></i></a>
+                    <a className="card-header-action btn btn-close" onClick={toggleFade}><i className="icon-close"></i></a>
                   </div>
                 </CardHeader>
                 <Collapse isOpen={state.collapse} id="collapseExample">
