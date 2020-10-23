@@ -33,7 +33,7 @@ export default {
       icon: 'icon-rocket',
       children: [
         {
-          name: 'Design Settings',
+          name: 'Filters',
           url: '/settings/Filters',
           icon: 'fa fa-paint-brush',
         },
@@ -48,7 +48,7 @@ export default {
           icon: 'fa fa-shopping-bag fa-lg',
         },
         {
-          name: 'Variant Option Filter',
+          name: 'Product Filter',
           url: '/settings/Productfilter',
           icon: 'icon-drop',
         },

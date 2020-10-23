@@ -23,6 +23,7 @@ import axios from "axios";
 import { AppSwitch } from '@coreui/react';
 
 class Filters extends Component {
+  
   constructor(props) {
     super(props);
 
@@ -492,6 +493,7 @@ class Filters extends Component {
   };
 
   componentDidMount = async () => {
+    console.log("filters called")
     await axios
       .get(
         "https://vishwainfoways.com/shopify-api/shopify-admin-api.php",

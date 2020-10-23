@@ -2,13 +2,9 @@ import React, {  Suspense } from 'react';
 import LoginView from '../../views/Pages/Login/LoginView';
 import {  BrowserRouter as Router ,Redirect , Route, Switch } from 'react-router-dom';
 import DefaultHeader from '../DefaultLayout/DefaultHeader'
-import { Container } from 'reactstrap';
 import navigation from '../../_nav';
-import routes from '../../routes';
 import {
-    AppAside,
-    AppBreadcrumb,
-    AppFooter,
+    
     AppHeader,
     AppSidebar,
     AppSidebarFooter,

@@ -26,7 +26,6 @@ const DefaultAside = (props) => {
     }
   }
 
-
     // eslint-disable-next-line
     const { children, ...attributes } = props;
 

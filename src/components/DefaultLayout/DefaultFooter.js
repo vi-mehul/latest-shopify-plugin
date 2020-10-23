@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -8,7 +8,7 @@ const propTypes = {
 const defaultProps = {};
 
 const DefaultFooter = (props) => {
- 
+ console.log("props",props)
     const { children, ...attributes } = props;
 
     return (

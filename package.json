@@ -31,7 +31,7 @@
     "react-switchery-component": "0.0.7",
     "react-test-renderer": "^16.14.0",
     "react-toggle-display": "^2.2.0",
-    "reactstrap": "^7.1.0",
+    "reactstrap": "^8.6.0",
     "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {

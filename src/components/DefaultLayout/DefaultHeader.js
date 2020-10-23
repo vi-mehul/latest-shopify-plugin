@@ -13,7 +13,7 @@ const propTypes = {
 const defaultProps = {};
 
 const DefaultHeader = (props) => {
-  
+  console.log("fsdfawf", props)
     
     const { children, ...attributes } = props;
     return (

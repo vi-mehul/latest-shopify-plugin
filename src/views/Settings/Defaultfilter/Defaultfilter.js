@@ -134,9 +134,10 @@ class Defaultfilter extends Component {
         let IsIncludeSwitchvalue = [];
         let IsExcludeSwitchvalue = [];
         default_filters.map((item, index) => {
+          console.log("item99",item)
           enabled.push(false);
-          IsIncludeSwitchvalue.push(item.Include[0].enabled == "0" ? false : true);
-          IsExcludeSwitchvalue.push(item.Exclude[0].enabled == "0" ? false : true);
+          IsIncludeSwitchvalue.push(item.Include[0].enabled === 0 ? false : true);
+          IsExcludeSwitchvalue.push(item.Exclude[0].enabled === 0 ? false : true);
           if (item.name == "collections") {
             let CIOption = item.Include[0].name.split(",");
             let OCIOption = [];
